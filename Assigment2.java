@@ -1,30 +1,21 @@
-/*
- Q2. Create a file abc.txt and read multiple path from it.
- */
 
-
-package Assigment;
-
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.*;
 
 /**
  *
  * @author Nazim
  */
-public class Assigment2 {
-  public static void main(String[] args) throws IOException {
-  File f=new File ("C:\\Nazim\\abc.txt");
-  //boolean b=f.createNewFile();
-  
-  int c;
-  
-       FileReader fr=new FileReader(f);
-  while (( c=fr.read())!= -1){
-      
-  
-      System.out.print((char)c);
+public class Assigment2 extends Animals2 {
+      public  void speak(){
+   System.out.println("Animal Speaking");}
+  public void   eat(){
+  System.out.println("Dog is eating");
   }
-  } 
+   public static void main(String[] args){
+       Dog ob = new Dog();
+        System.out.println(Animals2.color);
+        System.out.println(Animals2.breed);
+       ob.eat();
+       ob.speak();
+   } 
 }
