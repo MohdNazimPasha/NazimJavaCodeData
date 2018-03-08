@@ -1,25 +1,28 @@
 /*
- *
- **
- ***
- ****
+ Q4.Write a java program print the following Pattern.
+a
+ab
+abc
  */
-package nazimacadviw;
+package assigment28feb;
 
 /**
  *
  * @author Nazim
  */
 public class patern {
-    public static void main(String []args){
-        for(int i=1;i<=5;i++){
-            for(int j=1;j<=5;j++)
-            {
-                if(j<i)
-              System.out.print("*") ; 
-            }
-            System.out.println();
-        }
-    }
-    
+    public static void main(String[] args)
+    {
+     
+   for(int i=0;i<4;i++)
+   {
+   int alphabet=97;
+   for(int j=1;j<=i;j++){
+   System.out.print((char)alphabet);
+   alphabet++;
+   }
+   System.out.println();
+   
+   }
+}
 }
