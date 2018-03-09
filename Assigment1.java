@@ -1,18 +1,19 @@
-/*Q2 . a.txt File   b.text File                  Output Screen
+/*Q1 . a.txt File   b.text File                  Output Screen
        AAA          111                           AAA
-       BBB          222                           111
-       CCC          333                           BBB
+       BBB          222                           BBB
+       CCC          333                           CCC
+                                                  111
                                                   222
-                                                  CCC
                                                   333
 */
+
 import java.io.*;
 
 /**
  *
  * @author Nazim
  */
-public class Assigment2 {
+public class Assigment1 {
   public static void main(String[] args) throws IOException{
       
       try (FileReader fr1 = new FileReader ("C:\\Nazim\\a.txt");
@@ -24,14 +25,15 @@ public class Assigment2 {
            String sCurrentLine2;
          
 
-			while (((sCurrentLine1=br1.readLine() ) != null)&&((sCurrentLine2=br2.readLine() ) != null) ) {
+			while (((sCurrentLine1=br1.readLine() ) != null) ) {
 				System.out.println(sCurrentLine1);
-                                System.out.println(sCurrentLine2);
 			}
-                        
+                        while (((sCurrentLine2=br2.readLine() ) != null) ) {
+				System.out.println(sCurrentLine2);
+			}
 		} catch (IOException e) {
 		System.out.println(e);
 		}
-     
+     // br.close();
       }
   }  
